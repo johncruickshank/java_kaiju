@@ -28,5 +28,10 @@ public abstract class Kaiju {
         return attackValue;
     }
 
+    public String attack(Vehicle vehicle) {
+        vehicle.healthValue -= this.attackValue;
+        return this.name + " attacked a " + vehicle.type + "! It now has " + vehicle.healthValue + "hp left.";
+    }
+
 
 }

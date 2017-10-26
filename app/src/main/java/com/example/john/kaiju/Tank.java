@@ -1,10 +1,12 @@
 package com.example.john.kaiju;
 
+import com.example.john.kaiju.Behaviours.VehicleAttacks;
+
 /**
  * Created by John on 25/10/2017.
  */
 
-public class Tank extends Vehicle {
+public class Tank extends Vehicle implements VehicleAttacks {
     public Tank(String type, Integer healthValue, Integer attackValue) {
         super(type, healthValue, attackValue);
     }

@@ -1,12 +1,12 @@
 package com.example.john.kaiju;
 
-import com.example.john.kaiju.Behaviours.Attacker;
+import com.example.john.kaiju.Behaviours.Action;
 
 /**
  * Created by John on 25/10/2017.
  */
 
-public class Godzilla extends Kaiju implements Attacker {
+public class Godzilla extends Kaiju implements Action {
 
     public Godzilla(String name, Integer healthValue, Integer attackValue) {
         super(name, healthValue, attackValue);
@@ -14,11 +14,6 @@ public class Godzilla extends Kaiju implements Attacker {
 
     public String roar() {
         return "Emits a terrifying screech";
-    }
-
-    public String attack(Vehicle vehicle) {
-        vehicle.healthValue -= this.attackValue;
-        return this.name + " attacked a " + vehicle.type + "! It now has " + vehicle.healthValue + "hp left.";
     }
 
     public String move() {
